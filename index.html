@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Peddy</title>
+        <!--! DaisyUi & Tailwind Css -->
+        <link
+          href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!--! Google Fonts -->
+        <!--! Lato Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+          rel="stylesheet"
+        />
+        <!--! Inter Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+          rel="stylesheet"
+        />
+        <!--! Custom TailwindCss -->
+        <script>
+          tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                  clifford: "#da373d",
+                  primary: "#0E7A81",
+                },
+                fontFamily: {
+                  lato: ['"Lato"', "sans-serif"],
+                  inter: ['"Inter"', "sans-serif"],
+                },
+              },
+            },
+          };
+        </script>
+      </head>
+<body>
+    <!--! Header section -->
+    <header class="font-lato w-11/12 lg:w-11/12 mx-auto">
+      <!--! Navbar -->
+      <nav>
+        <div class="navbar">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="mr-4 lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li><a>Home</a></li>
+                <li>
+                  <a>Shop</a>
+                </li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <div class="flex gap-3 items-center">
+              <div><img src="images/logo.webp" alt="Peddy Logo" /></div>
+              <h1 class="font-black text-2xl">Peddy</h1>
+            </div>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-[#717171]">
+              <li><a>Home</a></li>
+              <li>
+                <a>Shop</a>
+              </li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <img src="images/Notify.svg" alt="" />
+          </div>
+        </div>
+      </nav>
+      <!--! Header content -->
+      <section class="mt-16">
+        <!--! Header Texts -->
+        <div class="lg:w-3/5 mx-auto">
+          <p class="text-center text-2xl font-semibold text-[#717171]">
+            Bringing Families Together ❤️
+          </p>
+          <h1
+            class="text-center font-black text-6xl text-black leading-tight my-5"
+          >
+            Your Path to Adoption <br />Starts Here
+          </h1>
+          <p class="text-base text-center lg:w-4/5 md:w-3/5 mx-auto">
+            Adopting a pet gives you the chance to transform their life while
+            gaining a loyal companion that will love you endlessly.
+          </p>
+        </div>
+        <div class="flex justify-center">
+          <button
+            id="view-more"
+            class="px-6 py-3 bg-primary rounded-xl text-white font-semibold mt-10"
+          >
+            View More
+          </button>
+        </div>
+        <!--! Header Image -->
+        <div class="lg:w-3/5 w-4/5 mx-auto mt-6">
+          <img src="images/pet.webp" alt="" />
+        </div>
+      </section>
+    </header>
+    <!--! Main section -->
+    <main>
+        <!--! Best friend section -->
+        <section class="my-16">
+            <!--! Text content -->
+            <div class="w-11/12 mx-auto">
+            <h1
+                class="text-center font-black text-6xl text-black leading-tight my-5"
+            >
+                Adopt Your Best Friend
+            </h1>
+            <p class="text-base text-center lg:w-3/5 md:w-4/5 mx-auto">
+                Discover our amazing collection of pets eager for loving homes. By
+                adopting you’re giving a furry friend a second chance at life and
+                the opportunity to share endless love and joy!
+            </p>
+            </div>
+            <div
+            class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-11/12 mx-auto gap-3 mt-8"
+            id="category-container"
+            ></div>
+        </section>
+        <!--! Nav -->
+        <section class="w-11/12 mx-auto" id="best-friend-section">
+            <div class="flex items-center justify-between mb-14">
+                <h1 class="text-2xl lg:text-3xl font-bold">Best Deal For you</h1>
+                <button
+                    class="px-6 py-3 bg-primary rounded-xl text-white font-semibold"
+                    id="sort-btn"
+                >
+                    Sort by Price
+                </button>
+            </div>
+
+            <!--! Cards -->
+            <!--! Error section -->
+            <div class="flex justify-between gap-5 mb-20">
+                <div id="error-section" class="hidden mb-16">
+                    <div class="flex justify-center">
+                    <img src="images/error.webp" alt="Not Found" />
+                    </div>
+                    <h1
+                    class="text-center font-black font-inter text-4xl text-black leading-tight my-5"
+                    >
+                    No Information Available
+                    </h1>
+                    <p class="text-base text-center lg:w-3/5 md:w-4/5 mx-auto">
+                    It seems there are no pets currently available in this category.
+                    Check back later or browse our other options to find your perfect
+                    companion!
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="card-container">
+                </div>
+                
+                <div class="mx-auto">
+                    <span class="loading loading-bars loading-lg" id="loading"></span>
+                </div>
+
+                <!--! Favorite section -->
+                <aside
+                    id="favorite-container"
+                    class="border grid lg:grid-cols-2 grid-cols-1 gap-3 p-3 rounded-xl auto-rows-min lg:w-[260px]"
+                ></aside>
+            </div>
+
+            <!--! Adopt success modal -->
+            <dialog id="my_modal_1" class="modal">
+            <div class="modal-box py-5 lg:p-12 font-inter">
+                <div>
+                <img
+                    src="https://cdn-icons-png.flaticon.com/512/2017/2017701.png "
+                    width="256"
+                    height="256"
+                    alt=""
+                    title=""
+                    class="img-small w-16 mx-auto mb-2"
+                />
+                </div>
+                <h3 class="text-5xl font-extrabold text-center mb-2">Congrats</h3>
+                <p class="py-4 text-center text-base lg:text-xl text-black">
+                Adoption Process is Start For Your Pet
+                </p>
+                <div
+                id="countdown-number"
+                class="font-extrabold text-black flex justify-center text-7xl"
+                ></div>
+            </div>
+            </dialog>
+
+            <!--! Pet details modal -->
+            <dialog id="my_modal_2" class="modal"></dialog>
+        </section>
+    </main>
+    <!--! Footer section -->
+    <footer
+      class="lg:flex justify-center items-start gap-72 bg-[#131313] p-10 text-white space-y-10"
+    >
+      <aside>
+        <div class="flex gap-3 items-center">
+          <div><img src="images/logo.webp" alt="Peddy Logo" /></div>
+          <h1 class="font-bold text-2xl">Peddy</h1>
+        </div>
+        <div class="space-y-2 mt-6 text-[#ffffffe6]">
+          <p>Location : ave. <span>Washington 165, NY CA 54003</span></p>
+          <p>Phone : <span> +31 85 964 47 25</span></p>
+          <p>Email : <span> info@yourdomain.com</span></p>
+          <p>Openings hours : <span> 9.00 AM - 5.00 PM</span></p>
+        </div>
+
+        <div class="flex gap-5 mt-6">
+          <img src="images/facebook.svg" alt="facebook" />
+          <img src="images/x.svg" alt="x" />
+          <img src="images/youtube.svg" alt="youtube" />
+          <img src="images/instragram.svg" alt="instagram" />
+        </div>
+      </aside>
+      <nav>
+        <h6 class="text-lg font-bold text-inter text-[#ffffffe6]">Home</h6>
+        <div class="text-[#ffffff99] mt-4 space-y-3">
+          <p class="link link-hover">About us</p>
+          <p class="link link-hover">Animals</p>
+          <p class="link link-hover">Foundation</p>
+          <p class="link link-hover">Contact</p>
+        </div>
+      </nav>
+      <aside>
+        <h6 class="text-lg font-bold text-inter text-[#ffffffe6]">
+          Drop a Message
+        </h6>
+        <div class="flex flex-col space-y-4 mt-6">
+          <input
+            type="text"
+            class="py-3 px-5 rounded-xl bg-[#1f1f1f] placeholder-[#ffffff99]"
+            placeholder="Enter your email"
+          />
+          <button class="py-3 px-5 bg-primary rounded-xl font-bold text-base">
+            Subscribe
+          </button>
+        </div>
+      </aside>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
